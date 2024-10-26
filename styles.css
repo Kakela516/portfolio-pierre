@@ -1,0 +1,62 @@
+body {
+    font-family: 'Bookman Old Style', serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6d9dd3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-photo {
+    width: 150px;
+    border-radius: 50%;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+section {
+    padding: 20px;
+}
+.social-icons {
+    display: flex;
+    justify-content: left; /* Centre les icônes horizontalement */
+    gap: 20px; /* Espace entre les icônes */
+}
+
+.social-icons img {
+    width: 50px; /* la taille des icônes */
+    height: 50px; /* Assurez-vous que toutes les images ont la même hauteur */
+    object-fit: contain; /* Maintient le ratio d'aspect sans déformer l'image */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
