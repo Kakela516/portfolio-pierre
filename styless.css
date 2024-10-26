@@ -1,0 +1,114 @@
+body {
+    font-family: 'Bookman Old Style', serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6d9dd3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-photo {
+    width: 150px;
+    border-radius: 50%;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Utilise Flexbox pour le menu */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+nav ul li {
+    margin: 0 10px; /* Ajoute un espace entre les éléments */
+}
+
+nav ul li a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Ajoute une transition */
+}
+
+nav ul li a:hover {
+    background-color: #111;
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+section {
+    padding: 20px;
+    opacity: 0; /* Commence invisible */
+    transform: translateY(20px); /* Déplace légèrement vers le bas */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition pour l'opacité et la transformation */
+}
+
+section.visible {
+    opacity: 1; /* Rend visible */
+    transform: translateY(0); /* Remet à sa position initiale */
+}
+
+/* Styles pour les icônes sociales */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centre les icônes horizontalement */
+    gap: 20px; /* Espace entre les icônes */
+}
+
+.social-icons img {
+    width: 50px; /* Taille des icônes */
+    height: 50px; /* Assurez-vous que toutes les images ont la même hauteur */
+    object-fit: contain; /* Maintient le ratio d'aspect sans déformer l'image */
+    transition: transform 0.3s ease; /* Ajoute une transition pour l'agrandissement */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Agrandit l'icône au survol */
+}
+
+/* Styles pour le footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Media Queries pour rendre le design responsive */
+@media (max-width: 768px) {
+   header {
+       padding: 15px; /* Réduit le padding sur mobile */
+   }
+
+   .profile-photo {
+       width: 100px; /* Réduit la taille de la photo sur mobile */
+   }
+
+   nav ul {
+       flex-direction: column; /* Empile les éléments verticalement sur mobile */
+       align-items: center; /* Centre les éléments verticalement */
+       padding-bottom: 10px; /* Ajoute un peu d'espace en bas du menu */
+   }
+
+   nav ul li {
+       margin-bottom: 10px; /* Espace entre les éléments du menu en mode mobile */
+       display: block; /* Affiche chaque élément sur une nouvelle ligne */
+   }
+
+   section {
+       padding: 15px; /* Réduit le padding dans les sections sur mobile */
+   }
+
+   .social-icons img {
+       width: 40px; /* Réduit la taille des icônes sur mobile */
+       height: 40px; 
+   }
+}
